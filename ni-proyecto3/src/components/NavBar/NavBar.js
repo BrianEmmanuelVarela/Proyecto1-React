@@ -1,5 +1,6 @@
 
-import img from './skull.png';
+import img from './skull.png'
+import CardWidget from '../CardWidget/CardWidget';
 
 const NavBar = ()  => {
     return(
@@ -13,7 +14,7 @@ const NavBar = ()  => {
       <button type="button" class="btn btn-light button"> DEPORTE</button>
       <button type="button" class="btn btn-light button"> COLECCION</button>
       <i class="fas fa-user-alt"></i>
-      <i class="fas fa-shopping-bag"></i>
+      <CardWidget/>
       <i class="fas fa-search"></i>
 
       <form class="form-inline">
