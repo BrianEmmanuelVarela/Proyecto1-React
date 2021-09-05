@@ -1,10 +1,10 @@
-const ItemListContainer = ({children}) => {
-    
+const ItemListContainer = (props) => {
+    console.log(props)
 return (
     <div>
-        <p>ACA VA EL CONTENIDO </p>
+        <p style={{color: 'red'}}>ACA VA EL CONTENIDO </p>
  
-{children}
+{props.children}
        
     </div>
 )
