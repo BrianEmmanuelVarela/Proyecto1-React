@@ -22,11 +22,9 @@ const NavBar = ()  => {
        
         
       </form>
-    </nav>
-    
+
+
+</nav>
     )
 }
-
-
-
 export default NavBar
