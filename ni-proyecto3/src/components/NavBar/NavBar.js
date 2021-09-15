@@ -6,6 +6,8 @@ const NavBar = ()  => {
     return(
       
       <nav class="navbar navbar-light bg-white d-flex justify-content-around">
+        
+   
       <div><img class="img" src={img}/></div>
        <button type="button" class="btn btn-light button"> <strong>HOMBRES</strong></button>
       <button type="button" class="btn btn-light button"> <strong>MUJERES</strong></button>

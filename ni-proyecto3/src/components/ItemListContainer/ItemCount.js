@@ -15,16 +15,18 @@ const funcionMax = () =>{
     } else setCount (count + 1)
 }
     return(
-        <div class="ItemList">
+        <div class="">
         <h1 style={{color: 'black'}}>{count}</h1>
-        <div class="d-flex justify-content-md-around">
-        <button type="button" class="btn btn-dark btn-lg" onClick={funcionRestar}>-</button>
-        <button type="button"class="btn btn-dark btn-lg " onClick={funcionMax}>+</button>
-       
+        
+        <button type="button" class="btn btn-dark btn-sm button1" onClick={funcionRestar}>-</button>
+        <button type="button"class="btn btn-dark btn-sm button1 " onClick={funcionMax}>+</button>
+        <div>
+        <a href="" class="btn btn-dark btn-lg  button1">Agregar al carrito</a>
+       </div>
     </div>
-    <br/>
-    <button type="button" class="btn btn-outline-secondary btn-lg ">Agregar al carrito</button>
-</div>
+    
+   
+
     );
     }
 

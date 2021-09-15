@@ -46,3 +46,10 @@ img{
   font-family: 'Montserrat', sans-serif; ;
   font-size: 13px;
 }
+.button1{
+  border-bottom: gray;
+  font-size: 15px;
+}
+.card1{
+  width: 15rem;
+}
