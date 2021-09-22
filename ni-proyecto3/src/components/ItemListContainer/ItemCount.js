@@ -21,7 +21,7 @@ const funcionMax = () =>{
         <button type="button" class="btn btn-dark btn-sm button1" onClick={funcionRestar}>-</button>
         <button type="button"class="btn btn-dark btn-sm button1 " onClick={funcionMax}>+</button>
         <div>
-        <a href="" class="btn btn-dark btn-lg  button1">Agregar al carrito</a>
+        <a href="dangerouslySetInnerHTML" class="btn btn-dark btn-lg  button1">Agregar al carrito</a>
        </div>
     </div>
     

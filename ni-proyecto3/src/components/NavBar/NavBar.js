@@ -8,7 +8,7 @@ const NavBar = ()  => {
       <nav class="navbar navbar-light bg-white d-flex justify-content-around">
         
    
-      <div><img class="img" src={img}/></div>
+      <div><img class="img" alt ="producto" src={img}/></div>
        <button type="button" class="btn btn-light button"> <strong>HOMBRES</strong></button>
       <button type="button" class="btn btn-light button"> <strong>MUJERES</strong></button>
       <button type="button" class="btn btn-light button"> <strong>NIÑOS</strong></button>

@@ -1,10 +1,10 @@
 const ItemListContainer = (props) => {
-    console.log(props)
+    
 return (
     <div>
         
- 
-{props.children}
+ {props.children}
+
        
     </div>
 )
