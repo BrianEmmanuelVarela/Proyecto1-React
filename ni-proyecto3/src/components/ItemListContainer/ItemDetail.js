@@ -13,7 +13,7 @@ const Detail = ({produc}) => {
 <h5><strong>{produc?.name} {produc?.marca}</strong></h5>
 <div class="card-body  ">
 <h6>{produc?.color} </h6>
-<h6> Talle: <strong> {produc.talle} </strong></h6>
+<h6> Talle: <strong> {produc?.talle} </strong></h6>
 <span class="badge badge-light"><h6><strong><p class="card-text">${produc?.precio}</p></strong></h6>  </span>
     
                  

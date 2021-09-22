@@ -23,7 +23,7 @@ function getList () {
       
     })}
 
-const ProductosDetail = () => {
+const ItemDetailContainer = () => {
     const [producto , setProducto] = useState ([])
 useEffect(() =>{
   const listD = getList()
@@ -48,4 +48,4 @@ useEffect(() =>{
     }
 
 
-    export default ProductosDetail;
+    export default ItemDetailContainer;

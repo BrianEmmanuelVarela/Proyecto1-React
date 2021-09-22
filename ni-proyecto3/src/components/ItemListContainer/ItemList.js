@@ -1,11 +1,17 @@
 import Ropa from "./Item";
 
 
-const Productoslista = ({ropa}) => {
+const ItemList = ({products}) => {
+if (!products ) {
+    return (
+     <h1>Cargando...</h1>   
+    )
+}
+
 return (
 <div class="card-columns col-sm 4 row mx-8 justify-content-center">
     
-    {ropa.map(r => <Ropa key={r.id}  name={r.name} marca={r.marca}  img={r.img} />)}
+    {products.map(r => <Ropa key={r.id}  name={r.name} marca={r.marca}  img={r.img} />)}
 
     
 </div>
@@ -20,7 +26,7 @@ return (
 
 
 
-export default Productoslista;
+export default ItemList;
 
 
 
