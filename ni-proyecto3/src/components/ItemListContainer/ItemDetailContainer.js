@@ -1,12 +1,20 @@
-import ItemDetails from "./ItemDetail";
+import Detail from "./ItemDetail";
 
 
-const ItemDetailContainer = ({details}) => {
+const Productosdetail = ({details}) => {
     return (
-        <div>
-        {details.map(d => <ItemDetails key={d.id} name={d.name} marca={d.marca} talle={d.talle} color={d.color} precio={d.precio} />)}
-   </div>
+    <div class="card-columns col-sm 4 row mx-8 justify-content-center">
+        
+        {details.map(d => <Detail key={d.id}   talle={d.talle} color={d.color} precio={d.precio} />)}
+    
+        
+    </div>
+    
     )
-}
+    
+    
+    
+    }
 
-export default ItemDetailContainer;
+
+    export default Productosdetail;

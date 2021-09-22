@@ -3,7 +3,7 @@ import { useState } from "react"
 import '../ItemListContainer/ItemListContainer.css'
 const BotonControlador = () =>{
 
-const [count, setCount] = useState(1)
+const [count, setCount] = useState(0)
 const funcionRestar =() => {
     if (count <=0) {
         alert ("Valor no permitido")
