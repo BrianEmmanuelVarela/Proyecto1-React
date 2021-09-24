@@ -1,5 +1,7 @@
 import ItemList from "./ItemList"
 import { useEffect , useState } from 'react';
+import { useLocation } from "react-router";
+
 const productos = [
     {id:'00' ,name:'Remera', marca:'Puma',img:"./img/remeraPuma.jpg" },
     {id:'01',name:'Remera', marca:'Nike' , img:"./img/remeraNikeroja.jpg"},
@@ -14,18 +16,25 @@ const productos = [
 
 function getList () {
     return new Promise ((resolve,reject) =>{
-      setTimeout(() => resolve(productos), 2000)
+      setTimeout(() => resolve(productos), 1000)
     })}
    
 const ItemListContainer = () => {
     const [listropa, setListRopa] = useState ([])
-    
+
+    const location = useLocation()
+
+    console.log(location.pathname)
       useEffect(() =>{
       const list = getList()
     
       list.then(resultadoPromise => setListRopa (resultadoPromise))
     
     },[])
+  if (listropa.length ===0){
+    return <h2 class="font">Buscando productos...</h2>
+  }
+  
 
 return (
     <div>

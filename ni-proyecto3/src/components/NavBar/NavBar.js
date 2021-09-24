@@ -1,6 +1,7 @@
 
 import img from './skull.png'
 import CardWidget from '../CardWidget/CardWidget';
+import { Link } from 'react-router-dom';
 
 const NavBar = ()  => {
     return(
@@ -8,13 +9,24 @@ const NavBar = ()  => {
       <nav class="navbar navbar-light bg-white d-flex justify-content-around">
         
    
-      <div><img class="img" alt ="producto" src={img}/></div>
-       <button type="button" class="btn btn-light button"> <strong>HOMBRES</strong></button>
-      <button type="button" class="btn btn-light button"> <strong>MUJERES</strong></button>
-      <button type="button" class="btn btn-light button"> <strong>NIÑOS</strong></button>
-      <button type="button" class="btn btn-light button"> MARCAS</button>
-      <button type="button" class="btn btn-light button"> DEPORTE</button>
-      <button type="button" class="btn btn-light button"> COLECCION</button>
+      <div>
+        <Link to="/">
+        <img class="img" alt ="producto" src={img}/>
+        </Link>
+        </div>
+      
+    
+     <Link to ="hombres">   <button type="button" class="btn btn-light button"><strong>HOMBRES</strong></button></Link>
+     <Link>   <button type="button" class="btn btn-light button"><strong>MUJERES</strong> </button></Link>
+     <Link>   <button type="button" class="btn btn-light button"><strong>NIÑOS</strong></button></Link>
+     <Link>   <button type="button" class="btn btn-light button">MARCAS </button></Link>
+       <Link> <button type="button" class="btn btn-light button">DEPORTES</button> </Link>
+          
+      
+      
+       
+      
+      
       <i class="fas fa-user-alt"></i>
       <CardWidget/>
       <i class="fas fa-search"></i>
