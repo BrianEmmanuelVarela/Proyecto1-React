@@ -1,7 +1,7 @@
 
 import img from './skull.png'
 import CardWidget from '../CardWidget/CardWidget';
-import { Link } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 
 const NavBar = ()  => {
     return(
@@ -16,11 +16,11 @@ const NavBar = ()  => {
         </div>
       
     
-     <Link to ="hombres">   <button type="button" class="btn btn-light button"><strong>HOMBRES</strong></button></Link>
-     <Link>   <button type="button" class="btn btn-light button"><strong>MUJERES</strong> </button></Link>
-     <Link>   <button type="button" class="btn btn-light button"><strong>NIÑOS</strong></button></Link>
-     <Link>   <button type="button" class="btn btn-light button">MARCAS </button></Link>
-       <Link> <button type="button" class="btn btn-light button">DEPORTES</button> </Link>
+     <NavLink to ='/hombres'>   <button type="button" class="btn btn-light button"><strong>HOMBRES</strong></button></NavLink>
+     <NavLink to='/mujeres'>   <button type="button" class="btn btn-light button"><strong>MUJERES</strong> </button></NavLink>
+     <NavLink to='/niños'>   <button type="button" class="btn btn-light button"><strong>NIÑOS</strong></button></NavLink>
+     <NavLink to='/marcas'>   <button type="button" class="btn btn-light button">MARCAS </button></NavLink>
+       <NavLink to='/deportes'> <button type="button" class="btn btn-light button">DEPORTES</button> </NavLink>
           
       
       

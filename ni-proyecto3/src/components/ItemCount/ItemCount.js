@@ -1,6 +1,8 @@
 import { useState } from "react"
-
 import '../ItemListContainer/ItemListContainer.css'
+
+
+
 const BotonControlador = () =>{
 
 const [count, setCount] = useState(0)
@@ -15,7 +17,8 @@ const funcionMax = () =>{
     } else setCount (count + 1)
 }
     return(
-        <div class="">
+        <div class=" ">
+            
         <h1 style={{color: 'black'}}>{count}</h1>
         
         <button type="button" class="btn btn-dark btn-sm button1" onClick={funcionRestar}>-</button>
@@ -23,6 +26,7 @@ const funcionMax = () =>{
         <div>
         <a href="dangerouslySetInnerHTML" class="btn btn-dark btn-lg  button1">Agregar al carrito</a>
        </div>
+       
     </div>
     
    

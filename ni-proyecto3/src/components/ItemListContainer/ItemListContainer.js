@@ -1,6 +1,7 @@
 import ItemList from "./ItemList"
 import { useEffect , useState } from 'react';
-import { useLocation } from "react-router";
+import { useParams } from 'react-router';
+
 
 const productos = [
     {id:'00' ,name:'Remera', marca:'Puma',img:"./img/remeraPuma.jpg" },
@@ -16,33 +17,59 @@ const productos = [
 
 function getList () {
     return new Promise ((resolve,reject) =>{
-      setTimeout(() => resolve(productos), 1000)
+      setTimeout(() => resolve(productos), 1500)
     })}
    
 const ItemListContainer = () => {
-    const [listropa, setListRopa] = useState ([])
+    const [listRopa, setListRopa] = useState ([])
+    const {name} = useParams()
 
-    const location = useLocation()
-
-    console.log(location.pathname)
+    
       useEffect(() =>{
       const list = getList()
+    list.then(list =>{
+      if(!name){
+        setListRopa(list)
+      } else{
+        const prodCategory = list.filter(prod => prod.name.toLowerCase() === name) 
+        setListRopa (prodCategory)
+      }
+    }, err => {
+      console.log(err);
+    })
+    return (()=>{
+      setListRopa ([])
+    })
+
+  },[name])
+if (listRopa.length === 0){
+  return (
+    <div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+  )
+}
+
     
-      list.then(resultadoPromise => setListRopa (resultadoPromise))
-    
-    },[])
-  if (listropa.length ===0){
-    return <h2 class="font">Buscando productos...</h2>
-  }
-  
+      
+
 
 return (
+<section className="container-fluid">
+            <div>
+                <h1 className="title font">Hombres</h1>
+                
+            </div>
+            
+
+
     <div>
-    <ItemList products = {listropa}/>
+    <ItemList products = {listRopa}/>
  
 
        
     </div>
+    </section>
 )
 
 
