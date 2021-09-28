@@ -9,7 +9,7 @@ if (!products ) {
 }
 
 return (
-<div class="card-columns col-sm 4 row mx-8 justify-content-center">
+<div className="card-columns col-sm 4 row mx-8 justify-content-center">
 {products.map(product=> <Item key={product.id}  productDetail={product}/>)}
 
     

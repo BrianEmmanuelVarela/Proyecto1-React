@@ -44,8 +44,8 @@ const ItemListContainer = () => {
   },[name])
 if (listRopa.length === 0){
   return (
-    <div class="spinner-grow text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
+    <div className="spinner-grow text-secondary" role="status">
+  <span className="sr-only">Loading...</span>
 </div>
   )
 }
